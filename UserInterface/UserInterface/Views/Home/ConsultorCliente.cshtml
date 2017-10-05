@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Clientes por Consultor";
+}
+
+@section scripts{
+    <script src="~/Scripts/jquery.maskedinput.min.js"></script>
+    <script src="~/Content/app/consultorClienteApp.js"></script>
+}
+<div class="jumbotron">
+    <h1>HIGS - Listagem de Clientes por Consultor</h1>
+    <p class="lead">Permite visualizar quais clientes foram cadastrador por um consultor.</p>
+    <p><a href="/Home/Index" class="btn btn-primary btn-large">Retornar à pagina inicial</a></p>
+</div>
+
+<div class="row">
+    <form id="frmCliente">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="CodIdentificadorTotvs">Código identificador Consultor TOTVS:</label>
+                <input type="text" class="form-control" id="CodIdentificadorTotvs" placeholder="Cód. Identificador Consultor TOTVS">
+                <a href="#" class="btn btn-primary btn-large" id="btnBuscar">Buscar</a>
+            </div>
+        </div>
+        <div class="col-md-12" id="divTabela">
+            <table class="table table-condensed table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td>Data/Hora de cadastro</td>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela"></tbody>
+            </table>
+        </div>
+    </form>
+</div>
